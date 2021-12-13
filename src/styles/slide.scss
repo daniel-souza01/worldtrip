@@ -1,0 +1,29 @@
+.swiper-button-prev {
+  left: 2.65625rem;
+
+  &::after {
+    font-size: 1.875rem;
+    color: #ffba08;
+  }
+}
+
+.swiper-button-next {
+  right: 2.65625rem;
+
+  &::after {
+    font-size: 1.875rem;
+    color: #ffba08;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #999999;
+  opacity: 1;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.75rem 0 0 !important;
+
+  &.swiper-pagination-bullet-active {
+    background-color: #ffba08;
+  }
+}
