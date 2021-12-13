@@ -1,7 +1,9 @@
-import { Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading, Text, Link as ChakraLink } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import SwiperCore, { Pagination, Navigation } from 'swiper'
+
+import Link from 'next/link'
 
 SwiperCore.use([Pagination, Navigation])
 
@@ -18,32 +20,36 @@ export function Slide() {
       className="mySwiper"
     >
       <SwiperSlide>
-        <Flex
-          maxW="1240px"
-          h="450px"
-          bgImage="/slide/europa.svg"
-          direction="column"
-        >
-          <Heading
-            fontWeight="bold"
-            fontSize="5xl"
-            lineHeight="4.5rem"
-            textAlign="center"
-            color="light.100"
-            mt="180"
-          >
-            Europa
-          </Heading>
-          <Text
-            fontWeight="bold"
-            fontSize="2xl"
-            lineHeight="9"
-            textAlign="center"
-            color="light.200"
-          >
-            O continente mais antigo.
-          </Text>
-        </Flex>
+        <Link href={`/continent/europe`} passHref>
+          <ChakraLink>
+            <Flex
+              maxW="1240px"
+              h="450px"
+              bgImage="/slide/europa.svg"
+              direction="column"
+            >
+              <Heading
+                fontWeight="bold"
+                fontSize="5xl"
+                lineHeight="4.5rem"
+                textAlign="center"
+                color="light.100"
+                mt="180"
+              >
+                Europa
+              </Heading>
+              <Text
+                fontWeight="bold"
+                fontSize="2xl"
+                lineHeight="9"
+                textAlign="center"
+                color="light.200"
+              >
+                O continente mais antigo.
+              </Text>
+            </Flex>
+          </ChakraLink>
+        </Link>
       </SwiperSlide>
 
       <SwiperSlide>

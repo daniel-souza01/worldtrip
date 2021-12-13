@@ -7,12 +7,19 @@ import {
   SimpleGrid,
   Divider
 } from '@chakra-ui/react'
+
 import { Header } from '../components/Header'
 import { Slide } from '../components/Slide'
+
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <Flex direction="column">
+      <Head>
+        <title>Home | worldtrip</title>
+      </Head>
+
       <Header />
 
       <Box w="100%" h="20.9375rem" bgImage="banner.svg" bgSize="cover">
