@@ -12,17 +12,39 @@ import {
   PopoverContent,
   PopoverBody,
   PopoverArrow,
-  PopoverCloseButton
+  PopoverCloseButton,
+  PopoverHeader
 } from '@chakra-ui/react'
 import { Header } from '../../components/Header'
 
 import Head from 'next/head'
+import { GetStaticProps, GetStaticPaths } from 'next'
+import { api } from '../../services/api'
 
-export default function Continet() {
+interface ContinentProps {
+  continent: {
+    id: string
+    title: string
+    subtitle: string
+    image: string
+    image2: string
+    bio: string
+    countries: number
+    languages: number
+    cities: {
+      image: string
+      name: string
+      countre: string
+      countreFlag: string
+    }[]
+  }
+}
+
+export default function Continet({ continent }: ContinentProps) {
   return (
     <Flex direction="column">
       <Head>
-        <title>Europa | worldtrip</title>
+        <title>{continent.title} | worldtrip</title>
       </Head>
 
       <Header />
@@ -30,7 +52,7 @@ export default function Continet() {
       <Box
         w="100%"
         h="31.25rem"
-        bgImage="/bannerEurope.svg"
+        bgImage={continent.image2}
         bgRepeat="no-repeat"
         bgSize="cover"
       >
@@ -43,7 +65,7 @@ export default function Continet() {
             color="light.100"
             mt="23.0625rem"
           >
-            Europa
+            {continent.title}
           </Heading>
         </Box>
       </Box>
@@ -63,11 +85,7 @@ export default function Continet() {
               color="dark.500"
               textAlign="justify"
             >
-              A Europa é, por convenção, um dos seis continentes do mundo.
-              Compreendendo a península ocidental da Eurásia, a Europa
-              geralmente divide-se da Ásia a leste pela divisória de águas dos
-              montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-              sudeste
+              {continent.bio}
             </Text>
           </Box>
 
@@ -82,7 +100,7 @@ export default function Continet() {
                 textAlign="center"
                 color="yellow.900"
               >
-                50
+                {continent.countries}
               </Text>
               <Text
                 fontWeight="semibold"
@@ -105,7 +123,7 @@ export default function Continet() {
                 textAlign="center"
                 color="yellow.900"
               >
-                60
+                {continent.languages}
               </Text>
               <Text
                 fontWeight="semibold"
@@ -128,7 +146,7 @@ export default function Continet() {
                 textAlign="center"
                 color="yellow.900"
               >
-                27
+                {continent.cities.length}
               </Text>
               <Flex>
                 <Text
@@ -148,8 +166,12 @@ export default function Continet() {
                   <PopoverContent>
                     <PopoverArrow />
                     <PopoverCloseButton />
-                    <PopoverBody>
-                      Londres, París, Roma, Praga, Amsterdã...
+                    <PopoverHeader fontWeight="bold" color="dark.500">
+                      Cidades +100
+                    </PopoverHeader>
+                    <PopoverBody color="dark.500">
+                      São as cidades que esse continente possui que estão entre
+                      as 100 cidades mais visitadas do mundo.
                     </PopoverBody>
                   </PopoverContent>
                 </Popover>
@@ -172,243 +194,83 @@ export default function Continet() {
           </Heading>
 
           <SimpleGrid mt={10} w="100%" gap="2.8125rem" minChildWidth="256px">
-            <Box
-              maxW="2xs"
-              h="17.4375rem"
-              bgColor="light.50"
-              border="1px solid rgba(255, 186, 8, 0.5)"
-              borderRadius="4px"
-            >
+            {continent.cities.map(city => (
               <Box
-                w="100%"
-                h="10.8125rem"
-                bgImage="/cityLondres.svg"
-                bgSize="cover"
-                borderRadius="4px 4px 0 0"
-              ></Box>
+                maxW="2xs"
+                h="17.4375rem"
+                bgColor="light.50"
+                border="1px solid rgba(255, 186, 8, 0.5)"
+                borderRadius="4px"
+              >
+                <Box
+                  w="100%"
+                  h="10.8125rem"
+                  bgImage={city.image}
+                  bgSize="cover"
+                  borderRadius="4px 4px 0 0"
+                ></Box>
 
-              <Box w="100%" p="18px 24px 25px">
-                <Flex
-                  maxW="13rem"
-                  m="auto"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Box>
-                    <Text
-                      as="strong"
-                      fontWeight="semibold"
-                      fontSize="xl"
-                      lineHeight="1.5625rem"
-                      color="dark.500"
-                    >
-                      Londres
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      fontSize="md"
-                      lineHeight="tall"
-                      color="dark.300"
-                      mt=".75rem"
-                    >
-                      Reino Unido
-                    </Text>
-                  </Box>
-                  <Avatar src="/avatarRu.svg" name="Reino Unido" size="sm" />
-                </Flex>
+                <Box w="100%" p="18px 24px 25px">
+                  <Flex
+                    maxW="13rem"
+                    m="auto"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Box>
+                      <Text
+                        as="strong"
+                        fontWeight="semibold"
+                        fontSize="xl"
+                        lineHeight="1.5625rem"
+                        color="dark.500"
+                      >
+                        {city.name}
+                      </Text>
+                      <Text
+                        fontWeight="medium"
+                        fontSize="md"
+                        lineHeight="tall"
+                        color="dark.300"
+                        mt=".75rem"
+                      >
+                        {city.countre}
+                      </Text>
+                    </Box>
+                    <Avatar
+                      src={city.countreFlag}
+                      name="Reino Unido"
+                      size="sm"
+                    />
+                  </Flex>
+                </Box>
               </Box>
-            </Box>
-
-            <Box
-              maxW="2xs"
-              h="17.4375rem"
-              bgColor="light.50"
-              border="1px solid rgba(255, 186, 8, 0.5)"
-              borderRadius="4px"
-            >
-              <Box
-                w="100%"
-                h="10.8125rem"
-                bgImage="/cityLondres.svg"
-                bgSize="cover"
-                borderRadius="4px 4px 0 0"
-              ></Box>
-
-              <Box w="100%" p="18px 24px 25px">
-                <Flex
-                  maxW="13rem"
-                  m="auto"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Box>
-                    <Text
-                      as="strong"
-                      fontWeight="semibold"
-                      fontSize="xl"
-                      lineHeight="1.5625rem"
-                      color="dark.500"
-                    >
-                      Londres
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      fontSize="md"
-                      lineHeight="tall"
-                      color="dark.300"
-                      mt=".75rem"
-                    >
-                      Reino Unido
-                    </Text>
-                  </Box>
-                  <Avatar src="/avatarRu.svg" name="Reino Unido" size="sm" />
-                </Flex>
-              </Box>
-            </Box>
-
-            <Box
-              maxW="2xs"
-              h="17.4375rem"
-              bgColor="light.50"
-              border="1px solid rgba(255, 186, 8, 0.5)"
-              borderRadius="4px"
-            >
-              <Box
-                w="100%"
-                h="10.8125rem"
-                bgImage="/cityLondres.svg"
-                bgSize="cover"
-                borderRadius="4px 4px 0 0"
-              ></Box>
-
-              <Box w="100%" p="18px 24px 25px">
-                <Flex
-                  maxW="13rem"
-                  m="auto"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Box>
-                    <Text
-                      as="strong"
-                      fontWeight="semibold"
-                      fontSize="xl"
-                      lineHeight="1.5625rem"
-                      color="dark.500"
-                    >
-                      Londres
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      fontSize="md"
-                      lineHeight="tall"
-                      color="dark.300"
-                      mt=".75rem"
-                    >
-                      Reino Unido
-                    </Text>
-                  </Box>
-                  <Avatar src="/avatarRu.svg" name="Reino Unido" size="sm" />
-                </Flex>
-              </Box>
-            </Box>
-
-            <Box
-              maxW="2xs"
-              h="17.4375rem"
-              bgColor="light.50"
-              border="1px solid rgba(255, 186, 8, 0.5)"
-              borderRadius="4px"
-            >
-              <Box
-                w="100%"
-                h="10.8125rem"
-                bgImage="/cityLondres.svg"
-                bgSize="cover"
-                borderRadius="4px 4px 0 0"
-              ></Box>
-
-              <Box w="100%" p="18px 24px 25px">
-                <Flex
-                  maxW="13rem"
-                  m="auto"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Box>
-                    <Text
-                      as="strong"
-                      fontWeight="semibold"
-                      fontSize="xl"
-                      lineHeight="1.5625rem"
-                      color="dark.500"
-                    >
-                      Londres
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      fontSize="md"
-                      lineHeight="tall"
-                      color="dark.300"
-                      mt=".75rem"
-                    >
-                      Reino Unido
-                    </Text>
-                  </Box>
-                  <Avatar src="/avatarRu.svg" name="Reino Unido" size="sm" />
-                </Flex>
-              </Box>
-            </Box>
-
-            <Box
-              maxW="2xs"
-              h="17.4375rem"
-              bgColor="light.50"
-              border="1px solid rgba(255, 186, 8, 0.5)"
-              borderRadius="4px"
-            >
-              <Box
-                w="100%"
-                h="10.8125rem"
-                bgImage="/cityLondres.svg"
-                bgSize="cover"
-                borderRadius="4px 4px 0 0"
-              ></Box>
-
-              <Box w="100%" p="18px 24px 25px">
-                <Flex
-                  maxW="13rem"
-                  m="auto"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Box>
-                    <Text
-                      as="strong"
-                      fontWeight="semibold"
-                      fontSize="xl"
-                      lineHeight="1.5625rem"
-                      color="dark.500"
-                    >
-                      Londres
-                    </Text>
-                    <Text
-                      fontWeight="medium"
-                      fontSize="md"
-                      lineHeight="tall"
-                      color="dark.300"
-                      mt=".75rem"
-                    >
-                      Reino Unido
-                    </Text>
-                  </Box>
-                  <Avatar src="/avatarRu.svg" name="Reino Unido" size="sm" />
-                </Flex>
-              </Box>
-            </Box>
+            ))}
           </SimpleGrid>
         </Flex>
       </Box>
     </Flex>
   )
+}
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { continent: id } = params
+
+  const response = await api.get(`/continents/${id}`)
+
+  const continent = response.data
+
+  return {
+    props: {
+      continent
+    },
+    revalidate: 60 * 30 // 30 minutes
+  }
 }

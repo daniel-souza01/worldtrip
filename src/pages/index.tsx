@@ -13,6 +13,10 @@ import { Slide } from '../components/Slide'
 
 import Head from 'next/head'
 
+import { GetStaticProps } from 'next'
+import { api } from '../services/api'
+import { useEffect } from 'react'
+
 export default function Home() {
   return (
     <Flex direction="column">
@@ -180,3 +184,16 @@ export default function Home() {
     </Flex>
   )
 }
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   // const continentsResponse = await api
+//   //   .get('trasactions')
+//   //   .then(response => console.log(response.data))
+
+//   return {
+//     props: {
+//       // continentsResponse
+//     },
+//     revalidate: 60 * 30 // 30 minutes
+//   }
+// }
