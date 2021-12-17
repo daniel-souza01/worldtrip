@@ -1,13 +1,12 @@
 import { Flex, Heading, Text, Link as ChakraLink } from '@chakra-ui/react'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Navigation } from 'swiper'
+SwiperCore.use([Pagination, Navigation])
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { api } from '../services/api'
-
-SwiperCore.use([Pagination, Navigation])
 
 interface continent {
   id: string
@@ -53,8 +52,8 @@ export function Slide() {
               }}
             >
               <Flex
-                maxW="1240px"
-                h="450px"
+                maxW="100%"
+                h={['15.625rem', '28.125rem']}
                 bgImage={continent.image}
                 bgRepeat="no-repeat"
                 bgSize="cover"
@@ -62,18 +61,18 @@ export function Slide() {
               >
                 <Heading
                   fontWeight="bold"
-                  fontSize="5xl"
-                  lineHeight="4.5rem"
+                  fontSize={['2xl', '5xl']}
+                  lineHeight={['9', '4.5rem']}
                   textAlign="center"
                   color="light.100"
-                  mt="180"
+                  mt={['6.875rem', '11.25rem']}
                 >
                   {continent.title}
                 </Heading>
                 <Text
                   fontWeight="bold"
-                  fontSize="2xl"
-                  lineHeight="9"
+                  fontSize={['0.875rem', '2xl']}
+                  lineHeight={['1.3125rem', '9']}
                   textAlign="center"
                   color="light.200"
                 >
