@@ -72,7 +72,7 @@ export function Cities({ cities }: CitiesProps) {
                       fontSize="md"
                       lineHeight="tall"
                       color="dark.300"
-                      mt=".75rem"
+                      mt="0.75rem"
                     >
                       {city.countre}
                     </Text>

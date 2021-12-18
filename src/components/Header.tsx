@@ -20,8 +20,8 @@ export function Header() {
               <Image
                 src="/voltar.svg"
                 alt="voltar para início"
-                w={['4', '8']}
-                h={['4', '8']}
+                w={['4px', '8px']}
+                h={['8px', '16px']}
                 border="2px, solid, #47585B"
               />
             </ChakraLink>
