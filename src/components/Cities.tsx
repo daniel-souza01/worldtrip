@@ -36,6 +36,7 @@ export function Cities({ cities }: CitiesProps) {
         >
           {cities.map(city => (
             <Box
+              key={city.name}
               maxW="2xs"
               h="17.4375rem"
               bgColor="light.50"
