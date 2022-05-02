@@ -3,15 +3,15 @@
 <!-- PROJECT SHIELDS -->
 <p align="center">
   <a href="https://github.com/daniel-souza01">
-    <img  src="https://img.shields.io/static/v1?label=made by&message=Daniel Souza&color=blue&style=for-the-badge" alt="author">   
+    <img  src="https://img.shields.io/static/v1?label=made by&message=Daniel Souza&color=yellow&style=for-the-badge" alt="author">   
  </a>
   
-  <a href="https://github.com/daniel-souza01/hotcoffee/blob/main/LICENSE">
-    <img  src="https://img.shields.io/github/license/daniel-souza01/hotcoffee?color=green&style=for-the-badge" alt="license"> 
+  <a href="https://github.com/daniel-souza01/worldtrip/blob/main/LICENSE.txt">
+    <img  src="https://img.shields.io/github/license/daniel-souza01/worldtrip?color=blueviolet&style=for-the-badge" alt="license"> 
   </a>
   
   <a href="https://www.linkedin.com/in/daniel-souza01/">
-    <img  src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="linkedin author">   
+    <img  src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=9cf" alt="linkedin author">   
  </a>
 </p>
 
@@ -22,7 +22,7 @@
     <img src="https://github.com/daniel-souza01/assets/blob/2d006c4d278b324a7fb82358dd109eb1fcc817d8/imgs_repos/icon-hotcoffee.png" alt="logo hotcoffee" width="80" height="80">
   </a>
 
-  <h3 align="center">Hotcoffee</h3>
+  <h3 align="center">worldtrip</h3>
 
   <p align="center">
     A minimalistic and modern blog made with React.js, Next.js and more!
@@ -101,14 +101,14 @@ Utilities
 <!-- DEPLOY -->
 ## Deploy
 
-Project in production :rocket: published by **vercel**: <a href="https://blog-hotcoffee.vercel.app/"><strong>View demo now »</strong></a>
+Project in production :rocket: published by **vercel**: <a href="https://worldtrip-daniel.vercel.app/"><strong>View demo now »</strong></a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See the file <a href="https://github.com/daniel-souza01/hotcoffee/blob/main/LICENSE.txt">`LICENSE.txt`</a> for more information.
+Distributed under the MIT License. See the file <a href="https://github.com/daniel-souza01/worldtrip/blob/main/LICENSE.txt">`LICENSE.txt`</a> for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -119,10 +119,6 @@ Distributed under the MIT License. See the file <a href="https://github.com/dani
 
 Daniel Souza - [danielsouza51764@gmail.com](mailto:danielsouza51764@gmail.com)
 
-Project Link: [https://github.com/daniel-souza01/hotcoffee](https://github.com/daniel-souza01/hotcoffee)
+Project Link: [https://github.com/daniel-souza01/hotcoffee](https://github.com/daniel-souza01/worldtrip)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-url]: https://linkedin.com/in/othneildrew
-
