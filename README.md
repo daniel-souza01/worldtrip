@@ -18,8 +18,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/daniel-souza01/hotcoffee">
-    <img src="https://github.com/daniel-souza01/assets/blob/2d006c4d278b324a7fb82358dd109eb1fcc817d8/imgs_repos/icon-hotcoffee.png" alt="logo hotcoffee" width="80" height="80">
+  <a href="https://github.com/daniel-souza01/worldtrip">
+    <img src="https://github.com/daniel-souza01/assets/blob/2aa51a08cd2f36450b259b38a3043f57e3010197/imgs_repos/logo-worldtrip.png" alt="logo worldtrip">
   </a>
 
   <h3 align="center">worldtrip</h3>
@@ -27,7 +27,7 @@
   <p align="center">
     A minimalistic and modern blog made with React.js, Next.js and more!
     <br />
-    <a href="https://blog-hotcoffee.vercel.app/"><strong>View Demo »</strong></a>
+    <a href="https://worldtrip-daniel.vercel.app/"><strong>View Demo »</strong></a>
     <h4 align="center">:rocket: In production :rocket:</h4>
     <br />
     <br />
@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img alt="print home hotcoffee" src="https://github.com/daniel-souza01/assets/blob/08543ff0f56553c4524284079f7a6ea7cba59922/imgs_repos/screenshot-hotcoffee.png" />
+<img alt="print home worldtrip" src="https://github.com/daniel-souza01/assets/blob/2aa51a08cd2f36450b259b38a3043f57e3010197/imgs_repos/screenshot-worldtrip.png" />
 
 Hotcoffee :coffee: is a fully usable minimalist blog with many features. This web application was made with many modern tools and concepts like `SSR`, `SSG`, and `JAMStack`.
 
@@ -119,6 +119,6 @@ Distributed under the MIT License. See the file <a href="https://github.com/dani
 
 Daniel Souza - [danielsouza51764@gmail.com](mailto:danielsouza51764@gmail.com)
 
-Project Link: [https://github.com/daniel-souza01/hotcoffee](https://github.com/daniel-souza01/worldtrip)
+Project Link: [https://github.com/daniel-souza01/worldtrip](https://github.com/daniel-souza01/worldtrip)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
