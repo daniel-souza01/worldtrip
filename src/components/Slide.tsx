@@ -29,7 +29,7 @@ export function Slide() {
   const [continents, setContinents] = useState<continent[]>([])
 
   useEffect(() => {
-    api.get('/continents').then(response => setContinents(response.data))
+    api.get('/api/continents').then(response => setContinents(response.data))
   }, [])
 
   return (

@@ -61,9 +61,9 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { continent: id } = params
 
-  const response = await api.get(`/continents/${id}`)
+  const { data } = await api.get('/api/continents')
 
-  const continent = response.data
+  const continent = data.find(continent => continent.id === id)
 
   return {
     props: {

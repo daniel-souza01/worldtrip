@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+let development = process.env.NODE_ENV !== 'production'
+
 export const api = axios.create({
-  baseURL: 'http://localhost:3333'
+  baseURL: development ? 'http://localhost:3000' : 'https://domain/api'
 })
