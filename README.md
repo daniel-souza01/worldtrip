@@ -25,7 +25,7 @@
   <h3 align="center">worldtrip</h3>
 
   <p align="center">
-    A minimalistic and modern blog made with React.js, Next.js and more!
+     :airplane: An application that helps you choose a place to travel!
     <br />
     <a href="https://worldtrip-daniel.vercel.app/"><strong>View Demo »</strong></a>
     <h4 align="center">:rocket: In production :rocket:</h4>
@@ -54,7 +54,7 @@
 
 <img alt="print home worldtrip" src="https://github.com/daniel-souza01/assets/blob/2aa51a08cd2f36450b259b38a3043f57e3010197/imgs_repos/screenshot-worldtrip.png" />
 
-Hotcoffee :coffee: is a fully usable minimalist blog with many features. This web application was made with many modern tools and concepts like `SSR`, `SSG`, and `JAMStack`.
+worldtript :airplane: is a web application that allows the user to see the most famous cities and characteristics of each continent so that they can better decide the place of destination for their trip.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -62,11 +62,8 @@ Hotcoffee :coffee: is a fully usable minimalist blog with many features. This we
 ## Features
 
 - [x] Using `Next.js` for a modern, feature-rich web application;
-- [x] Authentication system made with `NextAuth.js` in conjunction with `FaunaDB` for user storage;
-- [x] Use of a `CMS(Prismic CMS)` to manage and serve the content of articles;
-- [x] Implementation of an `infinite-scroll` for more performance application;
-- [x] Implementation of comments in articles using the `Disqus` plugin;
-- [x] Transition animation between pages done with `Nprogress`;
+- [x] Stylization made with `chakra-ui` in a declarative and modern way;
+- [x] Use of `typescript` and `swiper` for sliders.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
