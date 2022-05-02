@@ -79,22 +79,15 @@ The following tools were used in building the project:
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Sass](https://sass-lang.com/)
-- [NextAuth.js](https://next-auth.js.org/)
-- [Prsmic CMS](https://prismic.io/)
-- [Fauna DB](https://fauna.com/)
-- [Axios](https://github.com/axios/axios)
+- [Chakra UI](https://chakra-ui.com/)
+
 
 Utilities
 
-- [react-tippy](https://github.com/tvkhoa/react-tippy)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [Disqus](https://disqus.com/)
-- [Nprogress](https://www.npmjs.com/package/nprogress)
-- [react-avatar](https://www.npmjs.com/package/react-avatar)
-- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
-- [Google Fonts](https://fonts.google.com/)
+- [Axios](https://github.com/axios/axios)
+- [Swiper](https://swiperjs.com/)
 
-> See the file [package.json](https://github.com/daniel-souza01/hotcoffee/blob/main/package.json)
+> See the file [package.json](https://github.com/daniel-souza01/worldtrip/blob/main/package.json)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
